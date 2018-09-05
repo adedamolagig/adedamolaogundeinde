@@ -178,5 +178,30 @@ main{
 	height: 120px;
 }
 
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+	justify-content: space-around;
+}
+
+.left-section{
+	
+}
+
+.left-section-bottom{
+	flex-direction: column;
+	display: flex;
+	margin-top: 1rem;
+}
+
+.margin-top{
+	margin-top: 1rem;
+}
+
+.right-sectionCard{
+	display: flex;
+	flex-direction: column;
+}
 
 @import 'mobile';
