@@ -90,41 +90,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 65vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 45vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      /*background: url(4: 2:17)*/
-      border-radius: 50%; }
-  .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'project1' 'project2' 'project3';
-    grid-template-columns: 1fr; }
-  .works {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
-  .works {
-    grid-template-columns: 1fr; } }
-
 * {
   box-sizing: border-box; }
 
@@ -133,7 +98,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
+  line-height: 0.93; }
   body#bg-img {
     background: url(../img/black-coffee-business-cellphone-860379.jpg);
     background-attachment: fixed;
@@ -171,8 +136,7 @@ header {
   color: #003bff; }
 
 main {
-  padding: 4rem;
-  min-height: calc(100vh + 90px); }
+  padding: 4rem; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -192,7 +156,7 @@ main {
   grid-template-columns: repeat 3, 1fr; }
 
 .bio-image {
-  grid-area: bio-image;
+  grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
   border: #003bff 3px solid; }
@@ -260,7 +224,8 @@ main {
   padding: 1rem;
   background: #2b2b2b;
   color: #fff;
-  height: 120px; }
+  position: absolute;
+  width: -webkit-fill-available; }
 
 .flex {
   display: flex;
@@ -279,3 +244,38 @@ main {
 .right-sectionCard {
   display: flex;
   flex-direction: column; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show, div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 65vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 45vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      /*background: url(4: 2:17)*/
+      border-radius: 50%; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'project1' 'project2' 'project3';
+    grid-template-columns: 1fr; }
+  .works {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .works {
+    grid-template-columns: 1fr; } }
