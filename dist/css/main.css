@@ -90,41 +90,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 65vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 45vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      /*background: url(4: 2:17)*/
-      border-radius: 50%; }
-  .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'project1' 'project2' 'project3';
-    grid-template-columns: 1fr; }
-  .works {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
-  .works {
-    grid-template-columns: 1fr; } }
-
 * {
   box-sizing: border-box; }
 
@@ -171,8 +136,7 @@ header {
   color: #003bff; }
 
 main {
-  padding: 4rem;
-  min-height: calc(100vh - 60px); }
+  padding: 4rem; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -237,6 +201,25 @@ main {
       border-color: #003bff;
       transition: all 0.5s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #003bff;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
+
 .btn, .btn-dark, .btn-light {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -280,3 +263,38 @@ main {
 .right-sectionCard {
   display: flex;
   flex-direction: column; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show, div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 65vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 45vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      /*background: url(4: 2:17)*/
+      border-radius: 50%; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'project1' 'project2' 'project3';
+    grid-template-columns: 1fr; }
+  .works {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .works {
+    grid-template-columns: 1fr; } }
